@@ -4,18 +4,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.aldiv {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .box {
-    flex-direction: row;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 550px;
     height: 450px;
@@ -29,9 +20,9 @@
 }
 
 .pokemon {
-    padding-top: 70px;
-    padding-bottom: 80px;
-    padding-left: 89px;
+    position: relative;
+    top: 10%;
+    align-self: center;
     width: 372px;
     height: 137px;
 }
@@ -43,7 +34,6 @@
 
 .btn:link,
 .btn:visited {
-
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
@@ -110,15 +100,12 @@
 }
 
 .divbutton {
+    position:absolute; 
+    top:60%;
+    left:50%;
+    transform: translate(-50%, -50%);
     width: 25%;
     margin: 0 auto;
-}
-
-.alignButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .textbutton {
@@ -128,5 +115,28 @@
     font-weight: 800;
     font-size: 22px;
     color: #000000;
+
+}
+
+@media (max-width: 750px){
+    .box{  
+        width: 80%;
+        height: 300px;
+    }
+    .pokemon{
+        right: 5px;
+        width: 80%;
+        height: 30%;
+    }
+    .btn:link,
+    .btn:visited{
+        border-radius: 15px;
+    }
+    .textbutton{
+        font-size: 16px;
+    }
+    .divbutton{
+        left: 45%;
+    }
 
 }
